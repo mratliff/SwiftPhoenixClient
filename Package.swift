@@ -3,7 +3,15 @@
 import PackageDescription
 
 let package = Package(
-  name: "SwiftPhoenixClient", 
+  name: "SwiftPhoenixClient",
+  platforms: [
+        .iOS(.v13),
+    ],
+    products: [
+        .library(
+            name: "SwiftPhoenixClient",
+            targets: ["SwiftPhoenixClient"]),
+    ],
   dependencies: [
     .package(url: "https://github.com/daltoniam/Starscream.git", from: "3.0.6"),
   ],
